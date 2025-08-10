@@ -1,3 +1,4 @@
+"use strict";
 // let elementsByClassNameTarget: HTMLCollectionOf<Element> = document.getElementsByClassName('target');
 // console.log(elementsByClassNameTarget);
 //
@@ -10,7 +11,8 @@
 // let f1Element: HTMLInputElement = f1['username'];
 // console.log(f1Element);
 // let p: HTMLParagraphElement = document.createElement('p');
-var users = [
+Object.defineProperty(exports, "__esModule", { value: true });
+let users = [
     { name: 'vasya', age: 31, status: false },
     { name: 'petya', age: 30, status: true },
     { name: 'kolya', age: 29, status: true },
@@ -23,9 +25,8 @@ var users = [
     { name: 'olya', age: 31, status: false },
     { name: 'max', age: 31, status: true },
 ];
-for (var _i = 0, users_1 = users; _i < users_1.length; _i++) {
-    var user = users_1[_i];
-    var div = document.createElement('div');
+for (const user of users) {
+    let div = document.createElement('div');
     div.innerText = user.name;
     document.body.appendChild(div);
 }
